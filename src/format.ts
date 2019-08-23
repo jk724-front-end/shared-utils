@@ -49,12 +49,9 @@ export function formatMoney(num: number | string, digit = 2) {
   if (isNaN(num)) {
     num = '0'
   }
-  if (typeof digit !== 'number' || digit < 0) {
-    digit = 0
-  }
   // 最大支持11位小数
   if (digit > 11) {
-    return ''
+    return '0.00'
   }
   // 绝对值
   const sign = +num === (num = Math.abs(+num))

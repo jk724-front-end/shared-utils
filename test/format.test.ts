@@ -40,11 +40,13 @@ describe('format模块测试', () => {
     })
     it(`自定义保留1位小数 formatMoney(1500.567)`, () => {
       expect(utils.formatMoney('1500.567', 1)).toEqual('1,500.6')
+      expect(utils.formatMoney(1.23456789101232434242, 0)).toEqual('1')
     })
     it(`异常值返回 0.00 formatMoney('1500.567a')`, () => {
       expect(utils.formatMoney('1500.567a')).toEqual('0.00')
       expect(utils.formatMoney('')).toEqual('0.00')
       expect(utils.formatMoney('abc')).toEqual('0.00')
+      expect(utils.formatMoney(1.23456789101232434242, 12)).toEqual('0.00')
     })
   })
 })
