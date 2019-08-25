@@ -11,6 +11,7 @@ describe('validate模块测试', () => {
       expect(validatePhoneNumber('15248110721')).toBeTruthy()
       expect(validatePhoneNumber('168015667s8')).toBeFalsy()
       expect(validatePhoneNumber('1680156678')).toBeFalsy()
+      expect(validatePhoneNumber('')).toBeFalsy()
     })
   })
 
@@ -26,7 +27,7 @@ describe('validate模块测试', () => {
     it('validateIDCard(身份证号)', () => {
       // 大陆
       expect(validateIDCard('410222198706134038')).toBeTruthy()
-      expect(validateIDCard('11204416541220243x')).toBeFalsy()
+      expect(validateIDCard('410222198706134039')).toBeFalsy()
       // 香港
       expect(validateIDCard('c668668(a)')).toBeTruthy()
       expect(validateIDCard('A123456(0)')).toBeTruthy()
@@ -35,10 +36,14 @@ describe('validate模块测试', () => {
       expect(validateIDCard('N380988409')).toBeFalsy()
       // 澳门
       expect(validateIDCard('1000248(3)')).toBeTruthy()
+
+      // 乱七八糟
+      expect(validateIDCard('dasdsadasds')).toBeFalsy()
     })
   })
 
   describe('验证银行卡', () => {
     expect(validateBankCard('6222600260001072444')).toBeTruthy()
+    expect(validateBankCard('')).toBeFalsy()
   })
 })

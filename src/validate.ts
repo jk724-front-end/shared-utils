@@ -74,3 +74,10 @@ export function validateBankCard(bankCard: string) {
   if (!bankCard) return false
   return /^[0-9]{5,25}$/.test(bankCard)
 }
+
+export default {
+  validatePhoneNumber,
+  validateEmail,
+  validateIDCard,
+  validateBankCard
+}

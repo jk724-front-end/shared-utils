@@ -12,7 +12,7 @@
   "author": "bigMeow <running@vip.163.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jk724-front-end/shared-utils.git"
   },
   "license": "MIT",
   "engines": {
