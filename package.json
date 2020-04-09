@@ -1,6 +1,6 @@
 {
   "name": "@jk724/shared-utils",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "常用工具类",
   "keywords": [],
   "main": "dist/index.umd.js",
